@@ -37,6 +37,7 @@ public class SettingActivity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         currentUserID=mAuth.getCurrentUser().getUid();
         RootRef = FirebaseDatabase.getInstance().getReference();
+        RootRef.keepSynced(true);
         
         InitializeFields();
 
